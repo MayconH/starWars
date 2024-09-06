@@ -1,0 +1,416 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Star Wars', sans-serif;
+    color: white;
+    list-style: none;
+
+}
+
+body {
+    background-image: url("./assets/uni2.jpg");
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding-top: 5px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.logo {
+    width: 250px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    transition: .5s;
+
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: gold;
+}
+
+.logo-img {
+    width: 80px;
+    height: auto;
+}
+
+.logo-text {
+    font-size: 1rem;
+    font-weight: 300;
+    color: black;
+
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+
+}
+
+.social-midia {
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    font-size: 1.3rem;
+    transition: .5s;
+}
+
+i:hover {
+    color: gold;
+    transform: scale(1.2);
+}
+
+
+/* Cards */
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 20px 40px;
+}
+
+h2 {
+    width: 35%;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+
+
+}
+
+.cards {
+    height: 500px;
+    width: 250px;
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    cursor: pointer;
+    transition: .5s;
+    padding: 5px;
+
+    border: inset 2px white;
+
+}
+
+.cards:hover {
+    transform: scale(1.02);
+    border-color: gold;
+    color: gold;
+
+}
+
+.characters-name-bg {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characters-name {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+button {
+    width: 100px;
+    height: 28px;
+    background-color: black;
+    border: white inset 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: .5s;
+}
+
+button:hover {
+    color: gold;
+    border-color: gold;
+    transform: scale(1.01);
+}
+
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    margin: 40px 0 20px 0;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.coopyrigth {
+    font-weight: 500;
+    text-align: center;
+}
+
+.modal {
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.651);
+
+    position: fixed;
+    top: 0;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 20vw;
+    height: 60vh;
+    background-color: black;
+
+    border: 5px solid goldenrod;
+    border-radius: 5px;
+
+    padding: 10px 10px;
+    align-items: center;
+    justify-content: space-around;
+
+    text-align: left;
+
+}
+
+.character-image {
+    height: 80%;
+    width: 100%;
+    background-size: cover;
+
+
+    border: solid goldenrod 2px;
+    border-radius: 2%;
+
+}
+
+.modal-content-text {
+    margin-top: 10px;
+    height: 40%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.character-details {
+    font-family: fantasy;
+    font-size: 22px;
+
+}
+
+.page {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pag {
+    width: 50px;
+    border-radius: 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+    header {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-img {
+        width: 60px;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+        font-weight: 300;
+
+    }
+
+    i {
+        margin-top: 25px;
+        font-size: 1rem;
+
+    }
+
+    h2 {
+        font-size: 1rem;
+        text-align: center;
+        
+        
+    }
+
+    .cards {
+        height: 400px;
+        width: 300px;
+
+    }
+
+    .characters-name {
+        font-size: .7rem;
+        text-align: center;
+    }
+
+    .buttons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 20px;
+    
+    }
+
+    button {
+        width: 100px;
+        height: 28px;
+        font-size: .8rem;
+        transition: .5s;
+    }
+
+    .page {
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        
+        column-gap: 20px;
+        row-gap: 10px;
+        column-gap: 20px;
+
+        justify-content: space-around;
+    }
+    
+    .pag {
+        margin-top: 5px;
+        width: 20px;
+        border-radius: 15px;
+        row-gap: 10px;
+
+    }
+
+    .footer-logo {
+        font-size: .5rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .coopyrigth {
+        font-size: .5rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+
+    /* CARDS */
+
+    .modal-content {
+        width: 60vw;
+        height: 60vh;
+        background-color: black;
+    
+        border: 2px solid goldenrod;
+        border-radius: 5px;
+    
+        padding: 10px 10px;
+        align-items: center;
+        justify-content: space-around;
+    
+        text-align: left;
+    
+    }
+    
+    .character-image {
+        border: solid goldenrod 1px;
+    
+    }
+    
+    .modal-content-text {
+        margin-top: 5px;
+        height: 40%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .character-details {
+        font-size: 100%;
+        font-family: fantasy;
+
+    }
+
+    @media (max-width: 224px){
+
+        .character-details {
+            font-size: .5rem;
+            font-family: fantasy;
+    
+        }
+    }
+
+}
